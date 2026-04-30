@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>New York Mafia - Kostky</title>
+<style>
+    body {
+        font-family: sans-serif;
+        padding: 20mm;
+        background: #eee;
+    }
+    @media print {
+        body { 
+            padding: 0; 
+            background: #fff; 
+        }
+    }
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3mm; /* Menší mezera pro snadnější hromadné stříhání */
+        max-width: 150mm; /* Aby to na A4 tvořilo hezký blok */
+    }
+    .dice-face {
+        width: 16mm; /* Standardní rozměr D6 kostky */
+        height: 16mm;
+        border: 1px dashed #999;
+        background: #fff;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .dice-face svg {
+        width: 75%; 
+        height: 75%;
+        color: #111; /* Tematická černá/noir barva pro všechny stěny */
+    }
+</style>
+</head>
+<body>
+
+<div id="print-grid" class="grid"></div>
+
+<script>
+    // Vektorové definice pro stěny kostek
+    const svgs = {
+        // Taxi (Přesun) - Silueta klasického auta 20. let
+        taxi: '<svg viewBox="0 0 100 100"><path d="M15 60 L15 45 L30 45 L40 25 L70 25 L80 45 L95 45 L95 60 Z" fill="currentColor"/><circle cx="30" cy="65" r="10" fill="#fff" stroke="currentColor" stroke-width="4"/><circle cx="80" cy="65" r="10" fill="#fff" stroke="currentColor" stroke-width="4"/></svg>',
+        
+        // Nová postavička (Spawn) - Silueta postavy se symbolem Plus
+        spawn: '<svg viewBox="0 0 100 100"><circle cx="50" cy="35" r="14" fill="currentColor"/><path d="M30 85 C30 50 70 50 70 85 Z" fill="currentColor"/><path d="M10 25 L30 25 M20 15 L20 35" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>',
+        
+        // Odstřelovač - Zaměřovací kříž
+        sniper: '<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="8" fill="none"/><line x1="50" y1="5" x2="50" y2="95" stroke="currentColor" stroke-width="6"/><line x1="5" y1="50" x2="95" y2="50" stroke="currentColor" stroke-width="6"/></svg>',
+        
+        // Revolver - Silueta pistole
+        revolver: '<svg viewBox="0 0 100 100"><path d="M20 40 L70 40 L70 50 L85 50 L85 55 L45 55 L45 80 L25 75 Z" fill="currentColor"/><circle cx="45" cy="45" r="8" fill="none" stroke="#fff" stroke-width="2"/></svg>',
+        
+        // Thompson - Silueta samopalu s bubnovým zásobníkem
+        thompson: '<svg viewBox="0 0 100 100"><path d="M5 45 L40 45 L40 40 L85 40 L85 45 L95 45 L95 50 L85 50 L85 55 L50 55 L50 70 L35 70 L35 55 L25 55 L20 70 L10 70 Z" fill="currentColor"/><circle cx="42" cy="62" r="10" fill="currentColor"/><circle cx="42" cy="62" r="5" fill="#fff"/></svg>',
+        
+        // Munice - Klasický náboj (sjednoceno s žetony)
+        ammo: '<svg viewBox="0 0 100 100"><path d="M40 30 C40 5 60 5 60 30 L60 85 L40 85 Z" fill="currentColor"/><line x1="40" y1="70" x2="60" y2="70" stroke="#fff" stroke-width="6"/></svg>'
+    };
+
+    // Generujeme 6 ks od každé stěny (pro polepení 6 kostek)
+    const counts = { 
+        taxi: 6, 
+        spawn: 6, 
+        sniper: 6, 
+        revolver: 6,
+        thompson: 6,
+        ammo: 6
+    };
+    
+    const container = document.getElementById('print-grid');
+
+    // Renderovací smyčka
+    for (const [type, count] of Object.entries(counts)) {
+        for (let i = 0; i < count; i++) {
+            const div = document.createElement('div');
+            div.className = 'dice-face ' + type;
+            div.innerHTML = svgs[type];
+            container.appendChild(div);
+        }
+    }
+</script>
+
+</body>
+</html>

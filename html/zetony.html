@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>New York Mafia - Žetony</title>
+<style>
+    body {
+        font-family: sans-serif;
+        padding: 20mm;
+        background: #eee;
+    }
+    /* Set perfect white background and remove padding for printing */
+    @media print {
+        body { 
+            padding: 0; 
+            background: #fff; 
+        }
+    }
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5mm;
+    }
+    .token {
+        width: 30mm; 
+        height: 30mm;
+        border: 1px dashed #666;
+        border-radius: 50%;
+        background: #fff;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .token.vp { color: #fbc02d; }
+    
+    .token svg {
+        width: 60%; 
+        height: 60%;
+    }
+    
+    /* Mafia colors */
+    .token.booze { color: #d32f2f; }
+    .token.ammo { color: #e65100; }
+    .token.cargo { color: #5d4037; }
+    .token.bribe { color: #2e7d32; }
+</style>
+</head>
+<body>
+
+<div id="print-grid" class="grid"></div>
+
+<script>
+    // Define SVG paths for each token type
+    const svgs = {
+        booze: '<svg viewBox="0 0 100 100"><path d="M10 20 L90 20 L50 60 L50 90 M30 90 L70 90" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>',
+        ammo: '<svg viewBox="0 0 100 100"><path d="M40 40 Q50 10 60 40 L60 85 L40 85 Z M40 70 L60 70" stroke="currentColor" stroke-width="8" stroke-linejoin="round" fill="none"/></svg>',
+        cargo: '<svg viewBox="0 0 100 100"><rect x="15" y="15" width="70" height="70" stroke="currentColor" stroke-width="8" fill="none"/><line x1="15" y1="15" x2="85" y2="85" stroke="currentColor" stroke-width="8"/><line x1="85" y1="15" x2="15" y2="85" stroke="currentColor" stroke-width="8"/></svg>',
+        bribe: '<svg viewBox="0 0 100 100"><rect x="10" y="30" width="80" height="40" rx="4" stroke="currentColor" stroke-width="8" fill="none"/><line x1="30" y1="30" x2="30" y2="70" stroke="currentColor" stroke-width="4"/><line x1="70" y1="30" x2="70" y2="70" stroke="currentColor" stroke-width="4"/><text x="50" y="58" font-size="28" font-family="sans-serif" font-weight="bold" text-anchor="middle" fill="currentColor">$</text></svg>',
+        vp: '<svg viewBox="0 0 100 100"><polygon points="50,15 61,39 88,43 68,62 73,88 50,75 27,88 32,62 12,43 39,39" stroke="currentColor" stroke-width="8" stroke-linejoin="round" fill="none"/></svg>'
+    };
+
+    // Set how many tokens of each type to generate
+    const counts = { 
+        booze: 5, 
+        ammo: 5, 
+        cargo: 5, 
+        bribe: 5,
+        vp: 5
+    };
+    
+    const container = document.getElementById('print-grid');
+
+    // Render loop
+    for (const [type, count] of Object.entries(counts)) {
+        for (let i = 0; i < count; i++) {
+            const div = document.createElement('div');
+            div.className = 'token ' + type;
+            div.innerHTML = svgs[type];
+            container.appendChild(div);
+        }
+    }
+</script>
+
+</body>
+</html>
