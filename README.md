@@ -9,12 +9,12 @@
     - [Rusové](#rusové)
     - [Italové](#italové)
     - [Japonci](#japonci)
-    - [Maxičané](#maxičané)
+    - [Mexičané](#mexičané)
   - [Konec hry](#konec-hry)
   - [Začátek hry](#začátek-hry)
   - [Průběh kola](#průběh-kola)
     - [Pohyb po mapě](#pohyb-po-mapě)
-  - [Žetona a herní kameny](#žetona-a-herní-kameny)
+  - [Žetony a herní kameny](#žetony-a-herní-kameny)
   - [Kostky](#kostky)
   - [Balíčky](#balíčky)
     - [Herní cíle](#herní-cíle)
@@ -22,25 +22,16 @@
 - [Q\&A](#qa)
 - [DLC](#dlc)
 
-
 ![](./assets/cover-art.png)
 
 ## O hře
-Italská mafie ovládala newyork ale přicházejí noví hráči.
-
-Mafiánské gangy:
-- Italové 
-- Japonci
-- Rusové 
-- Mexico
-
-Využití hodu kostek jako v kostkovém bangu. Carcassonne postavičky. Vyřazování postaviček. Všichni proti všem. Small world, obsazování polí.
+New York Mafia je nekompromisní hra o kontrole území, kde hráči pomocí taktického rozmisťování svých členů gangu a hodů kostkami bojují o nadvládu nad městem.
 
 ## Mapa
 ![](./assets/maps/Greater-New-York.jpg)
 ![](./assets/maps/NewYork.png)
 
-Herní mapa je rozdělena na oblasti a každá ma sektory.
+Herní mapa je rozdělena na oblasti a každá ma sektory. Každá oblast je vyznačená jednou barvou.
 Voda lze překročit jen přes most, nebo vlakem.
 
 ### Oblast
@@ -55,13 +46,14 @@ Oblasti:
 - Brooklyn 
 - Staten Island
 
-
 Rada města 
 - 5 postaviček 
 
 ### Sekce
 
 Sekce - jedno pole na mapě.
+
+Na jednom polí může stát libovolné množství figurek.
 
 Sekce:
 - Železnice - pouze pohyb
@@ -91,6 +83,12 @@ Queens
 ## Karta hráče - Gang
 Karta hráče představuje maximální inventář munice. Každý gang má své specifické schopnosti.
 
+Mafiánské gangy:
+- Italové 
+- Japonci
+- Rusové 
+- Mexičané
+
 ### Rusové
 Rusové - nás hodně - za každého ztraceného člověka hoď kostkou, pokud ti padne "nová postavička" postav vyřazenou postavu na libovolně pole na herním plánu.
 
@@ -100,7 +98,9 @@ Italové - zásoby - za každou postavičku v docích získaš na začátku tahz
 ### Japonci
 Japonci - Obětování - můžeš ve svém tahu odstranit svou postavičku z herního planu. Pak odeber nepratelskou postavičku ze stejné lokace. 
 
-### Maxičané
+Japonec může v jednom kole stejnou postavičkou jak střílet, tak se obětovat.
+
+### Mexičané
 Mexiko - imigrace - když přijede vlak, prijede s ním na nádraží jeden nový mexičan (zůstane v lokaci nádraží), pokud máš volně figurky.
 
 ## Konec hry
@@ -108,6 +108,16 @@ Hráč s deseti vyteznymi žetony vyhrává hru.
 
 ## Začátek hry
 Karty gangu se na začátku hry losují.
+
+Hod kostkami určí pořadí hráčů. Začíná ten, kdo hodil nejvíc symbolů "nová postavička". 
+
+Následně hráči umístí tolik postaviček své barvy, kolik je hráčů ve hře. Každý hráč umístí své postavičky na jedno libovolné nádraží. 
+
+Hráči se střídají ve směru hodinových ručiček.
+
+V prvním kole hráči nesmí použít efekt Thomson.
+
+Na začátku druhého kola se odkryje n+1 karet herních cílů, kde n je počet hráčů. 
 
 ## Průběh kola
 
@@ -129,84 +139,58 @@ Manhattanská vzdálenost.
 Železniční stanice umožňují cestování po mapě.
 Z Železniční stanice můžeš přemístit v rámci tahu svou figurku na jinou stanici.
 
-## Žetona a herní kameny
-
-Žeton munice, který si můžeš nechat na později.
-
-Žeton vytěženého bodu.
+## Žetony a herní kameny
 
 8 figurek každé barvy.
+
+Žetony:
+- Žeton munice, který si můžeš nechat na později.
+- Žeton vítězného bodu.
+
+| ammo | victory point |
+|---|---|
+|![](./assets/symbols/Mafia_symbols_ammo.png) |![](./assets/symbols/Mafia_symbols_victory_point.png) |
 
 ## Kostky
 
 5-6 kostek
 
 Stěny kostek:
-- Přemístí postavičku na libovolné pole na herním plánu
-- Umístí novou postavičku na herní plán
-- Odstřelovač 
-- Revorvel 
-- Thomson
+- Přemístí postavičku na libovolné pole na herním plánu (symbol taxi),
+- Umístí novou postavičku na herní plán,
+- Odstřelovač,
+- Revolver, 
+- Thomson,
 - Munice
+
+![dice_symbols](./assets/dice/dice_symbols.png)
 
 Pokud ti padne munice můžeš si vzít žeton do zásoby.
 
 1+x
-Thomson může střílet jen v jedné oblasti. Výměnou z náboj, který ti padl nebo vlastníš jako žeton, odstraň jednu nepřátelskou postavičku z lokace.
+Thomson může střílet ve stejné sekci vícekrát. Výměnou za náboj, který ti padl nebo vlastníš jako žeton, odstraň jednu nepřátelskou postavičku ze sekce s tvojí figurkou.
 
 1+1
-Revolver má jen jeden výstřel - jedna postavička z lokace. Potřebuješ jeden náboj.
+Revolver má jen jeden výstřel - jedna postavička z lokace. Spotřebuje jeden náboj.
 
 2+0
-Odstřelovač "vrah" - odstranění libovolnou (nepřátelskou) postavičku z mapy. Nepotřebuješ náboje.
-
-2x symbol odstřelovače je smrt libovolně postavičky na mapě. Nepotřebuješ náboje.
+Odstřelovač "vrah" - odstranění libovolnou (nepřátelskou) postavičku z mapy. Nepotřebuje náboje.
 
 ## Balíčky
 
 ### Herní cíle
 
-Zajistí pozemky na Manhattanu
-2 1b
-3 2b
-4 3b
+počet herních cílů = počet hráčů + 1
 
-Místa v městské radě 
-2 1b
-4 3b
+Hráč získá všechny úkoly, které splňuje na konci svého tahu.
 
-Pašerátská zakázka v docích 
-3 2b
-5 4b
-
-Prohibice
-Obsad x barů 
-4 2b
-5 3b
-
-Výpalné - prodej ochranu n podnikům 
-4 2b
-5 3b
-
-Manhattan je náš!
-Jsi jediná barva na Manhattanu.
+[Karty cílů](./DOC/goles.md)
 
 ### Události
 
 Je jich pevný počet, rozloží to pevně pravdepodobnost jednotlivých událostí.
 
-Přijela nákladní lod
-Vlak
-Alkohol
-Zasoby
-Munice
-Úplatky 
-
-Alkohol - ten kdo má nejvíce postaviček v klubech
-
-Zásoby - ten kdo ovládá doky
-
-Úplatky - hráč s největším počtem postaviček v městské radě dostane vytěžený bod.
+[Karty událostí](./DOC/události.md)
 
 # Q&A
 
@@ -214,6 +198,4 @@ Co když někdo přijde o všechny postavičky?
 Nasbíra body a všichni ostatní se na něj vehnou. Hra se bude sama regulovat.
 
 # DLC
-Úplatky rady.
-
-Jiné mapy měst a karty bodové karty událostí.
+[DLC](./DOC/DLC.md)
