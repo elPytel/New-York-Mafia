@@ -5,20 +5,20 @@
   - [Mapa](#mapa)
     - [Oblast](#oblast)
     - [Sekce](#sekce)
-  - [Karta hráče - Gang](#karta-hráče---gang)
-    - [Rusové](#rusové)
-    - [Italové](#italové)
-    - [Japonci](#japonci)
-    - [Mexičané](#mexičané)
-  - [Konec hry](#konec-hry)
-  - [Začátek hry](#začátek-hry)
-  - [Průběh kola](#průběh-kola)
-    - [Pohyb po mapě](#pohyb-po-mapě)
   - [Žetony a herní kameny](#žetony-a-herní-kameny)
   - [Kostky](#kostky)
   - [Balíčky](#balíčky)
     - [Herní cíle](#herní-cíle)
     - [Události](#události)
+  - [Karta hráče - Gang](#karta-hráče---gang)
+    - [Rusové](#rusové)
+    - [Italové](#italové)
+    - [Japonci](#japonci)
+    - [Mexičané](#mexičané)
+  - [Cíl hry](#cíl-hry)
+  - [Začátek hry](#začátek-hry)
+  - [Průběh kola](#průběh-kola)
+    - [Pohyb po mapě](#pohyb-po-mapě)
 - [Q\&A](#qa)
 - [DLC](#dlc)
 
@@ -80,64 +80,6 @@ Queens
 - 1 klub
 - 2 malý podnik 
 
-## Karta hráče - Gang
-Karta hráče představuje maximální inventář munice. Každý gang má své specifické schopnosti.
-
-Mafiánské gangy:
-- Italové 
-- Japonci
-- Rusové 
-- Mexičané
-
-### Rusové
-Rusové - nás hodně - za každého ztraceného člověka hoď kostkou, pokud ti padne "nová postavička" postav vyřazenou postavu na libovolně pole na herním plánu.
-
-### Italové
-Italové - zásoby - za každou postavičku v docích získaš na začátku tahz jeden žeton munice, pokud máš munice méně než 5. Dober si munice, aby jsi měl max 5.
-
-### Japonci
-Japonci - Obětování - můžeš ve svém tahu odstranit svou postavičku z herního planu. Pak odeber nepratelskou postavičku ze stejné lokace. 
-
-Japonec může v jednom kole stejnou postavičkou jak střílet, tak se obětovat.
-
-### Mexičané
-Mexiko - imigrace - když přijede vlak, prijede s ním na nádraží jeden nový mexičan (zůstane v lokaci nádraží), pokud máš volně figurky.
-
-## Konec hry
-Hráč s deseti vyteznymi žetony vyhrává hru.
-
-## Začátek hry
-Karty gangu se na začátku hry losují.
-
-Hod kostkami určí pořadí hráčů. Začíná ten, kdo hodil nejvíc symbolů "nová postavička". 
-
-Následně hráči umístí tolik postaviček své barvy, kolik je hráčů ve hře. Každý hráč umístí své postavičky na jedno libovolné nádraží. 
-
-Hráči se střídají ve směru hodinových ručiček.
-
-V prvním kole hráči nesmí použít efekt Thomson.
-
-Na začátku druhého kola se odkryje n+1 karet herních cílů, kde n je počet hráčů. 
-
-## Průběh kola
-
-Průběh kola:
-0. Doplnění úkolu 
-1. Otoč kartu události
-2. Hody kostkami 
-3. Pohyb po mapě
-4. Vyhodnocení efektů na kostkách 
-5. Splnění úkolu 
-
-Kostkami se háže až třikrát. Po každém hodu se hráč může rozhodnou, které kostky si "nechá" a kterými bude házet znovu. Efekt se vyhodnotí po posledním hodu.
-
-### Pohyb po mapě
-
-Každé kolo můžeš udělat jeden tah s každou svojí figurkou. O jedna. 
-Manhattanská vzdálenost.
-
-Železniční stanice umožňují cestování po mapě.
-Z Železniční stanice můžeš přemístit v rámci tahu svou figurku na jinou stanici.
 
 ## Žetony a herní kameny
 
@@ -191,6 +133,65 @@ Hráč získá všechny úkoly, které splňuje na konci svého tahu.
 Je jich pevný počet, rozloží to pevně pravdepodobnost jednotlivých událostí.
 
 [Karty událostí](./DOC/události.md)
+
+## Karta hráče - Gang
+Karta hráče představuje maximální inventář munice. Každý gang má své specifické schopnosti.
+
+Mafiánské gangy:
+- Italové 
+- Japonci
+- Rusové 
+- Mexičané
+
+### Rusové
+Rusové - nás hodně - za každého ztraceného člověka hoď kostkou, pokud ti padne "nová postavička" postav vyřazenou postavu na libovolně pole na herním plánu.
+
+### Italové
+Italové - zásoby - za každou postavičku v docích získaš na začátku tahz jeden žeton munice, pokud máš munice méně než 5. Dober si munice, aby jsi měl max 5.
+
+### Japonci
+Japonci - Obětování - můžeš ve svém tahu odstranit svou postavičku z herního planu. Pak odeber nepratelskou postavičku ze stejné lokace. 
+
+Japonec může v jednom kole stejnou postavičkou jak střílet, tak se obětovat.
+
+### Mexičané
+Mexiko - imigrace - když přijede vlak, prijede s ním na nádraží jeden nový mexičan (zůstane v lokaci nádraží), pokud máš volně figurky.
+
+## Cíl hry
+První hráč s deseti vítěznými žetony vyhrává hru.
+
+## Začátek hry
+Karty gangu se na začátku hry losují.
+
+Hod kostkami určí pořadí hráčů. Začíná ten, kdo hodil nejvíc symbolů "nová postavička". 
+
+Následně hráči umístí tolik postaviček své barvy, kolik je hráčů ve hře. Každý hráč umístí své postavičky na jedno libovolné nádraží. 
+
+Hráči se střídají ve směru hodinových ručiček.
+
+V prvním kole hráči nesmí použít efekt Thomson.
+
+Na začátku druhého kola se odkryje n+1 karet herních cílů, kde n je počet hráčů. 
+
+## Průběh kola
+
+Průběh kola:
+0. Doplnění úkolu 
+1. Otoč kartu události
+2. Hody kostkami 
+3. Pohyb po mapě
+4. Vyhodnocení efektů na kostkách 
+5. Splnění úkolu 
+
+Kostkami se háže až třikrát. Po každém hodu se hráč může rozhodnou, které kostky si "nechá" a kterými bude házet znovu. Efekt se vyhodnotí po posledním hodu.
+
+### Pohyb po mapě
+
+Každé kolo můžeš udělat jeden tah s každou svojí figurkou. O jedna. 
+Manhattanská vzdálenost.
+
+Železniční stanice umožňují cestování po mapě.
+Z Železniční stanice můžeš přemístit v rámci tahu svou figurku na jinou stanici.
 
 # Q&A
 

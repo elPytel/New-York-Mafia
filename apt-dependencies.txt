@@ -1,0 +1,6 @@
+libxml2-utils
+xsltproc
+pylint
+pandoc
+fonts-symbola
+wkhtmltopdf
