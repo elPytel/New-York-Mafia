@@ -1,0 +1,38 @@
+@page { size: A4; margin: 18mm 16mm 18mm 16mm; }
+
+body {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  font-size: 11pt;
+}
+
+h1 { font-size: 20pt; }
+h2 { font-size: 15pt; margin-top: 18pt; }
+h3 { font-size: 12pt; margin-top: 14pt; }
+
+h1, h2, h3 { page-break-after: avoid; }
+table, pre, blockquote { page-break-inside: avoid; }
+
+a { color: black; text-decoration: none; }
+a::after { content: " (" attr(href) ")"; font-size: 9pt; }
+
+blockquote {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  border-left: 4px solid #888;
+  background: #f7f7f7;
+}
+
+blockquote strong {
+  display: block;
+  margin-bottom: 0.4em;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+blockquote strong:contains("TIP") { color: #2ea043; }
+blockquote strong:contains("NOTE") { color: #0969da; }
+blockquote strong:contains("WARNING") { color: #d1242f; }
+blockquote strong:contains("IMPORTANT") { color: #8250df; }
+blockquote strong:contains("QUESTION") { color: #bf8700; }

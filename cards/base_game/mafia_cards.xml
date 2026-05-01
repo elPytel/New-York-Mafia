@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cards game="New York Mafia" version="0.1">
+
+  <!-- Map decks to their back artwork -->
+  <icons>
+    <deck name="event" back="assets/back_event.jpg" />
+    <deck name="goal" back="assets/back_goal.jpg" />
+  </icons>
+
+  <!-- ========================================== -->
+  <!-- BALÍČEK UDÁLOSTÍ (20 karet)                -->
+  <!-- ========================================== -->
+
+  <!-- Vlak (4x) -->
+  <card id="evt_vlak" count="4" deck="event">
+    <name>Přijel vlak</name>
+    <text>Schopnost Mexičanů se aktivuje. Zároveň umožňuje komukoliv přesun po železnici v rámci jedné akce pohybu.</text>
+    <event type="vlak" image="assets/event_vlak.jpg" />
+  </card>
+
+  <!-- Munice (4x) -->
+  <card id="evt_munice" count="4" deck="event">
+    <name>Zásilka zbraní</name>
+    <text>Ekonomický stimul. Každý hráč si vezme 1 žeton munice do své zásoby.</text>
+    <event type="munice" image="assets/event_munice.jpg" />
+  </card>
+
+  <!-- Nákladní loď (3x) -->
+  <card id="evt_lod" count="3" deck="event">
+    <name>Nákladní loď</name>
+    <text>Do doků v Jersey připlula loď. Každý hráč získá 1 žeton munice za každou svou figurku, kterou má momentálně v docích.</text>
+    <event type="lod" image="assets/event_lod.jpg" />
+  </card>
+
+  <!-- Alkohol (3x) -->
+  <card id="evt_alkohol" count="3" deck="event">
+    <name>Dodávka alkoholu</name>
+    <text>Bodovací událost. Hráč, který má v tento moment nejvíce figurek v Klubech, získává 1 Vítězný bod (VB).</text>
+    <event type="alkohol" image="assets/event_alkohol.jpg" />
+  </card>
+
+  <!-- Zásoby (3x) -->
+  <card id="evt_zasoby" count="3" deck="event">
+    <name>Kontrola zásob</name>
+    <text>Bodovací událost. Hráč, který momentálně ovládá Doky (má tam absolutní většinu figurek), získává 1 Vítězný bod (VB).</text>
+    <event type="zasoby" image="assets/event_zasoby.jpg" />
+  </card>
+
+  <!-- Úplatky (3x) -->
+  <card id="evt_uplatky" count="3" deck="event">
+    <name>Zkorumpovaná radnice</name>
+    <text>Bodovací událost. Hráč s největším počtem postaviček v Městské radě získává 1 Vítězný bod (VB).</text>
+    <event type="uplatky" image="assets/event_uplatky.jpg" />
+  </card>
+
+  <!-- ========================================== -->
+  <!-- BALÍČEK HERNÍCH CÍLŮ (18 karet)            -->
+  <!-- ========================================== -->
+
+  <!-- Výpalné (Malé podniky) -->
+  <card id="goal_vypalne_2b" count="2" deck="goal">
+    <name>Výpalné</name>
+    <subtitle>Malé podniky</subtitle>
+    <text>Prodávej ochranu podnikatelům. Obsaď svými figurkami 4 malé podniky na mapě.</text>
+    <goal points="2" image="assets/goal_vypalne.jpg" />
+  </card>
+
+  <card id="goal_vypalne_3b" count="2" deck="goal">
+    <name>Kmotr čtvrti</name>
+    <subtitle>Malé podniky</subtitle>
+    <text>Totální kontrola obchodu. Obsaď svými figurkami 5 malých podniků na mapě.</text>
+    <goal points="3" image="assets/goal_vypalne.jpg" />
+  </card>
+
+  <!-- Pozemky na Manhattanu -->
+  <card id="goal_manhattan_1b" count="2" deck="goal">
+    <name>Pozemky na Manhattanu</name>
+    <subtitle>Stavba a vliv</subtitle>
+    <text>Rozšiř svůj vliv v centru. Zajisti (obsaď) svými lidmi 2 libovolné sekce na Manhattanu.</text>
+    <goal points="1" image="assets/goal_manhattan.jpg" />
+  </card>
+
+  <card id="goal_manhattan_2b" count="2" deck="goal">
+    <name>Manhattanský syndikát</name>
+    <subtitle>Stavba a vliv</subtitle>
+    <text>Získej kontrolu nad srdcem města. Zajisti (obsaď) svými lidmi 3 libovolné sekce na Manhattanu.</text>
+    <goal points="2" image="assets/goal_manhattan.jpg" />
+  </card>
+
+  <!-- Prohibice (Kluby) -->
+  <card id="goal_prohibice_2b" count="2" deck="goal">
+    <name>Králové prohibice</name>
+    <subtitle>Nelegální kluby</subtitle>
+    <text>Ovládni noční život. Obsaď svými figurkami 4 kluby.</text>
+    <goal points="2" image="assets/goal_prohibice.jpg" />
+  </card>
+
+  <card id="goal_prohibice_3b" count="1" deck="goal">
+    <name>Monopol na alkohol</name>
+    <subtitle>Nelegální kluby</subtitle>
+    <text>Naprostý monopol nad nočním životem. Obsaď svými figurkami 5 klubů.</text>
+    <goal points="3" image="assets/goal_prohibice.jpg" />
+  </card>
+
+  <!-- Místa v radě -->
+  <card id="goal_rada_1b" count="2" deck="goal">
+    <name>Podplacení úředníci</name>
+    <subtitle>Městská rada</subtitle>
+    <text>Získej vliv na radnici. Umísti 2 své figurky do sekce Městské rady.</text>
+    <goal points="1" image="assets/goal_rada.jpg" />
+  </card>
+
+  <card id="goal_rada_3b" count="1" deck="goal">
+    <name>Loutková vláda</name>
+    <subtitle>Městská rada</subtitle>
+    <text>Zcela ovládni rozhodování ve městě. Umísti 4 své figurky do sekce Městské rady.</text>
+    <goal points="3" image="assets/goal_rada.jpg" />
+  </card>
+
+  <!-- Pašeráci (Doky) -->
+  <card id="goal_doky_2b" count="1" deck="goal">
+    <name>Pašerácká zakázka</name>
+    <subtitle>Doky v Jersey</subtitle>
+    <text>Zabezpeč překladiště pro novou dodávku. Měj alespoň 3 své figurky v docích.</text>
+    <goal points="2" image="assets/goal_doky.jpg" />
+  </card>
+
+  <card id="goal_doky_4b" count="1" deck="goal">
+    <name>Pán přístavu</name>
+    <subtitle>Doky v Jersey</subtitle>
+    <text>Extrémně lukrativní zakázka, která vyžaduje plné nasazení. Měj alespoň 5 svých figurek v docích.</text>
+    <goal points="4" image="assets/goal_doky.jpg" />
+  </card>
+
+  <!-- Area Control (Manhattan) -->
+  <card id="goal_control_3b" count="2" deck="goal">
+    <name>Manhattan je náš!</name>
+    <subtitle>Územní dominance</subtitle>
+    <text>Vytlač konkurenci. Musíš mít figurky na Manhattanu a zároveň tam nesmí stát žádná nepřátelská barva.</text>
+    <goal points="3" image="assets/goal_control.jpg" />
+  </card>
+
+</cards>

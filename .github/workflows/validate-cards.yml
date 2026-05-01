@@ -1,0 +1,40 @@
+name: Validate cards XML
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  validate:
+    name: Validate XML files in cards/
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install apt packages
+        env:
+          APT_PACKAGES: libxml2-utils tree
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y $APT_PACKAGES
+
+      - name: List `cards/` (tree) and count XML files
+        run: |
+          echo "Repository root: $PWD"
+          if command -v tree >/dev/null 2>&1; then
+            echo "Tree of cards/:"
+            tree -a -L 2 cards || true
+          else
+            echo "tree not installed, falling back to ls -la for cards/"
+            ls -la cards || true
+          fi
+
+          echo "Counting .xml files under cards/ (recursively):"
+          count=$(find cards -type f -name '*.xml' | wc -l || true)
+          echo "XML files in cards/: $count"
+
+      - name: Validate cards via Makefile
+        run: |
+          set -euo pipefail
+          make validate

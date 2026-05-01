@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <!-- =====================
+       Shared enums and types
+       ===================== -->
+  <xs:simpleType name="DeckType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="event" />
+      <xs:enumeration value="goal" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EventTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="vlak" />
+      <xs:enumeration value="munice" />
+      <xs:enumeration value="lod" />
+      <xs:enumeration value="alkohol" />
+      <xs:enumeration value="zasoby" />
+      <xs:enumeration value="uplatky" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PointsInt">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CountInt">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Card id pattern -->
+  <xs:simpleType name="CardId">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9_]+" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- =====================
+       Icons config
+       ===================== -->
+  <xs:complexType name="DeckIconEntry">
+    <xs:attribute name="name" type="DeckType" use="required" />
+    <xs:attribute name="back" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="IconsBlock">
+    <xs:sequence>
+      <xs:element name="deck" type="DeckIconEntry" maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- =====================
+       Variant blocks
+       ===================== -->
+  <xs:complexType name="EventBlock">
+    <xs:attribute name="type" type="EventTypeEnum" use="required" />
+    <xs:attribute name="image" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="GoalBlock">
+    <xs:attribute name="points" type="PointsInt" use="required" />
+    <xs:attribute name="image" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- =====================
+       Card definition
+       ===================== -->
+  <xs:complexType name="Card">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="subtitle" type="xs:string" minOccurs="0" />
+      <xs:element name="text" type="xs:string" />
+
+      <!-- Exactly ONE variant block per card -->
+      <xs:choice>
+        <xs:element name="event" type="EventBlock" />
+        <xs:element name="goal" type="GoalBlock" />
+      </xs:choice>
+    </xs:sequence>
+
+    <xs:attribute name="id" type="CardId" use="required" />
+    <xs:attribute name="count" type="CountInt" use="optional" />
+    <xs:attribute name="deck" type="DeckType" use="required" />
+  </xs:complexType>
+
+  <!-- =====================
+       Root
+       ===================== -->
+  <xs:element name="cards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="icons" type="IconsBlock" minOccurs="0" maxOccurs="1" />
+        <xs:element name="card" type="Card" maxOccurs="unbounded" minOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="game" type="xs:string" use="optional" />
+      <xs:attribute name="version" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

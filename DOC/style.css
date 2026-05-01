@@ -1,0 +1,34 @@
+:root { }
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.5;
+  margin: 2rem auto;
+  width: min(90%, 65ch);
+  padding: 0 1rem;
+}
+h1, h2, h3 { line-height: 1.2; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+pre { padding: 0.8rem; overflow-x: auto; }
+blockquote { border-left: 4px solid #ccc; padding-left: 1rem; margin-left: 0; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ddd; padding: 0.4rem; vertical-align: top; }
+
+blockquote {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  border-left: 4px solid #888;
+  background: #f7f7f7;
+}
+
+blockquote strong {
+  display: block;
+  margin-bottom: 0.4em;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+blockquote strong:contains("TIP") { color: #2ea043; }
+blockquote strong:contains("NOTE") { color: #0969da; }
+blockquote strong:contains("WARNING") { color: #d1242f; }
+blockquote strong:contains("IMPORTANT") { color: #8250df; }
+blockquote strong:contains("QUESTION") { color: #bf8700; }
