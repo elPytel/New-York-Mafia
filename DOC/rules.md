@@ -20,8 +20,8 @@
     - [Pohyb po mapě](#pohyb-po-mapě)
 
 ## Mapa
-![](./assets/maps/Greater-New-York.jpg)
-![](./assets/maps/NewYork.png)
+![](../assets/maps/Greater-New-York.jpg)
+![](../assets/maps/NewYork.png)
 
 Herní mapa je rozdělena na oblasti a každá ma sektory. Každá oblast je vyznačená jednou barvou.
 Voda lze překročit jen přes most, nebo vlakem.
@@ -83,7 +83,7 @@ Queens
 
 | ammo | victory point |
 |---|---|
-|![](./assets/symbols/Mafia_symbols_ammo.png) |![](./assets/symbols/Mafia_symbols_victory_point.png) |
+|![](../assets/symbols/Mafia_symbols_ammo.png) |![](../assets/symbols/Mafia_symbols_victory_point.png) |
 
 ## Kostky
 
@@ -97,7 +97,7 @@ Stěny kostek:
 - Thomson,
 - Munice
 
-![dice_symbols](./assets/dice/dice_symbols.png)
+![dice_symbols](../assets/dice/dice_symbols.png)
 
 Pokud ti padne munice můžeš si vzít žeton do zásoby.
 
@@ -118,13 +118,13 @@ počet herních cílů = počet hráčů + 1
 
 Hráč získá všechny úkoly, které splňuje na konci svého tahu.
 
-[Karty cílů](./DOC/goles.md)
+[Karty cílů](../DOC/goles.md)
 
 ### Události
 
 Je jich pevný počet, rozloží to pevně pravdepodobnost jednotlivých událostí.
 
-[Karty událostí](./DOC/události.md)
+[Karty událostí](../DOC/události.md)
 
 ## Karta hráče - Gang
 Karta hráče představuje maximální inventář munice. Každý gang má své specifické schopnosti.

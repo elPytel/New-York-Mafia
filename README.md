@@ -3,6 +3,7 @@
 - [New York Mafia](#new-york-mafia)
   - [O hře](#o-hře)
   - [Mapa](#mapa)
+  - [Pravidla](#pravidla)
 - [Q\&A](#qa)
 - [DLC](#dlc)
 
@@ -14,6 +15,10 @@ New York Mafia je nekompromisní hra o kontrole území, kde hráči pomocí tak
 ## Mapa
 ![](./assets/maps/Greater-New-York.jpg)
 ![](./assets/maps/NewYork.png)
+
+## Pravidla
+
+[Pravidla hry](./DOC/rules.md)
 
 # Q&A
 
