@@ -118,13 +118,9 @@ počet herních cílů = počet hráčů + 1
 
 Hráč získá všechny úkoly, které splňuje na konci svého tahu.
 
-[Karty cílů](../DOC/goles.md)
-
 ### Události
 
 Je jich pevný počet, rozloží to pevně pravdepodobnost jednotlivých událostí.
-
-[Karty událostí](../DOC/události.md)
 
 ## Karta hráče - Gang
 Karta hráče představuje maximální inventář munice. Každý gang má své specifické schopnosti.

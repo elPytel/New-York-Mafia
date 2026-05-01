@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cards game="New York Mafia" version="0.1">
+
+  <!-- Zásoby (3x) -->
+  <card id="evt_zasoby" count="3" deck="event">
+    <name>Kontrola zásob</name>
+    <text>Bodovací událost. Hráč, který momentálně ovládá Doky (má tam absolutní většinu figurek), získává 1 Vítězný bod (VB).</text>
+    <event type="zasoby" image="assets/event_zasoby.png" />
+  </card>
+
+
+</cards>

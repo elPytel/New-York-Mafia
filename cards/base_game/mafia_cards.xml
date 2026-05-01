@@ -8,7 +8,7 @@
   <!-- Vlak (4x) -->
   <card id="evt_vlak" count="4" deck="event">
     <name>Přijel vlak</name>
-    <text>Schopnost Mexičanů se aktivuje. Zároveň umožňuje komukoliv přesun po železnici v rámci jedné akce pohybu.</text>
+    <text>Schopnost Mexičanů se aktivuje. Hráči získají 1 žeton munice za každou svou figurku, kterou mají momentálně na nádraží.</text>
     <event type="vlak" image="assets/event_vlak.png" />
   </card>
 
@@ -22,7 +22,7 @@
   <!-- Nákladní loď (3x) -->
   <card id="evt_lod" count="3" deck="event">
     <name>Nákladní loď</name>
-    <text>Do doků v Jersey připlula loď. Každý hráč získá 1 žeton munice za každou svou figurku, kterou má momentálně v docích.</text>
+    <text>Do doků v Jersey připlula loď. Hráč ovládající největší množství doků získává 1 žeton munice.</text>
     <event type="lod" image="assets/event_lod.png" />
   </card>
 
@@ -31,13 +31,6 @@
     <name>Dodávka alkoholu</name>
     <text>Bodovací událost. Hráč, který má v tento moment nejvíce figurek v Klubech, získává 1 Vítězný bod (VB).</text>
     <event type="alkohol" image="assets/event_alkohol.png" />
-  </card>
-
-  <!-- Zásoby (3x) -->
-  <card id="evt_zasoby" count="3" deck="event">
-    <name>Kontrola zásob</name>
-    <text>Bodovací událost. Hráč, který momentálně ovládá Doky (má tam absolutní většinu figurek), získává 1 Vítězný bod (VB).</text>
-    <event type="zasoby" image="assets/event_zasoby.png" />
   </card>
 
   <!-- Úplatky (3x) -->
@@ -70,15 +63,23 @@
   <card id="goal_manhattan_1b" count="2" deck="goal">
     <name>Pozemky na Manhattanu</name>
     <subtitle>Stavba a vliv</subtitle>
-    <text>Rozšiř svůj vliv v centru. Zajisti (obsaď) svými lidmi 2 libovolné sekce na Manhattanu.</text>
+    <text>Rozšiř svůj vliv v centru. Obsaď svými lidmi 2 libovolné sekce na Manhattanu.</text>
     <goal points="1" image="assets/goal_manhattan.png" />
   </card>
 
   <card id="goal_manhattan_2b" count="2" deck="goal">
     <name>Manhattanský syndikát</name>
     <subtitle>Stavba a vliv</subtitle>
-    <text>Získej kontrolu nad srdcem města. Zajisti (obsaď) svými lidmi 3 libovolné sekce na Manhattanu.</text>
+    <text>Získej kontrolu nad srdcem města. Obsaď svými lidmi 4 libovolné sekce na Manhattanu.</text>
     <goal points="2" image="assets/goal_manhattan.png" />
+  </card>
+
+  <!-- Area Control (Manhattan) -->
+  <card id="goal_control_3b" count="2" deck="goal">
+    <name>Manhattan je náš!</name>
+    <subtitle>Územní dominance</subtitle>
+    <text>Vytlač konkurenci. Musíš mít figurky na Manhattanu a zároveň tam nesmí stát žádná nepřátelská barva.</text>
+    <goal points="3" image="assets/goal_control.png" />
   </card>
 
   <!-- Prohibice (Kluby) -->
@@ -100,14 +101,14 @@
   <card id="goal_rada_1b" count="2" deck="goal">
     <name>Podplacení úředníci</name>
     <subtitle>Městská rada</subtitle>
-    <text>Získej vliv na radnici. Umísti 2 své figurky do sekce Městské rady.</text>
+    <text>Získej vliv na radnici. Obsaď svými figurkami 2 místa v Městské radě.</text>
     <goal points="1" image="assets/goal_rada.png" />
   </card>
 
   <card id="goal_rada_3b" count="1" deck="goal">
     <name>Loutková vláda</name>
     <subtitle>Městská rada</subtitle>
-    <text>Zcela ovládni rozhodování ve městě. Umísti 4 své figurky do sekce Městské rady.</text>
+    <text>Zcela ovládni rozhodování ve městě. Obsaď svými figurkami 4 místa v Městské radě.</text>
     <goal points="3" image="assets/goal_rada.png" />
   </card>
 
@@ -124,14 +125,6 @@
     <subtitle>Doky v Jersey</subtitle>
     <text>Extrémně lukrativní zakázka, která vyžaduje plné nasazení. Měj alespoň 5 svých figurek v docích.</text>
     <goal points="4" image="assets/goal_doky.png" />
-  </card>
-
-  <!-- Area Control (Manhattan) -->
-  <card id="goal_control_3b" count="2" deck="goal">
-    <name>Manhattan je náš!</name>
-    <subtitle>Územní dominance</subtitle>
-    <text>Vytlač konkurenci. Musíš mít figurky na Manhattanu a zároveň tam nesmí stát žádná nepřátelská barva.</text>
-    <goal points="3" image="assets/goal_control.png" />
   </card>
 
 </cards>
