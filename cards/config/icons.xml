@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<icons>
+  <deck name="event" back="assets/back_events.png" />
+  <deck name="goal" back="assets/back_goals.png" />
+</icons>

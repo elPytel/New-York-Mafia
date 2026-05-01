@@ -91,13 +91,13 @@
 
           /* Text body */
           .card-body {
-            padding: 4mm 4mm;
+            padding: 4mm 4mm 4mm;
             font-size: 3.6mm;
             line-height: 1.3;
             text-align: center;
             flex-grow: 1;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
           }
 
