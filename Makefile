@@ -81,7 +81,6 @@ $(OUT_DIR):
 
 $(HTML_DIR):
 	mkdir -p $(HTML_DIR)
-	cp -r assets $(HTML_DIR)/
 
 help:
 	@echo "Usage: make [target]"
@@ -192,6 +191,7 @@ html-both: merge
 
 # HTML build now produces per-directory pages for tables and stats
 html: html-table-all html-stats-all html-rules html-cards html-both $(HTML_DIR)
+	cp -r assets $(HTML_DIR)/
 	@printf "$(YELLOW)Selected mode=$(BLUE)%s$(YELLOW) color=$(BLUE)%s$(RESET)\n" "${MODE}" "${COLOR}"
 	@printf "$(GREEN)HTML files generation complete.$(RESET)\n"
 
