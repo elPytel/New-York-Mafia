@@ -1,17 +1,17 @@
 # Makefile — deck PDF generator helpers
-PY        := python3
+PY		:= python3
 OUT_DIR   := out
 TOOLS_DIR := tools
 HTML_DIR  := pages
 DOCS_DIR  := DOC
 
-TITTLE    := New York Mafia
+TITTLE	:= New York Mafia
 
 # Enable colored output (1 = on, 0 = off)
 ENABLE_COLOR ?= 1
 
 ifeq ($(ENABLE_COLOR),1)
-RED    := $(shell printf '\033[0;31m')
+RED	:= $(shell printf '\033[0;31m')
 GREEN  := $(shell printf '\033[0;32m')
 YELLOW := $(shell printf '\033[0;33m')
 BLUE   := $(shell printf '\033[0;34m')
@@ -27,11 +27,11 @@ RESET :=
 endif
 
 # XSLT mode: front | back | both
-MODE      ?= both
-COLOR     ?= color
+MODE	  ?= both
+COLOR	 ?= color
 # Default input: single XML file. Override like:
 #   make render-file INPUT=cards/cards.xml
-INPUT     ?= cards/cards.xml
+INPUT	 ?= cards/cards.xml
 
 # Default base cards directory (render this when no DLC selected)
 BASE_CARDS := cards/base_game
@@ -54,7 +54,7 @@ endif
 XML_IN 	  	?= cards/*.xml
 XSL_CARDS 	:= $(TOOLS_DIR)/cards_to_html.xslt
 XSL_TABLE 	:= $(TOOLS_DIR)/cards_to_table.xslt
-XSD       	:= cards/cards.xsd
+XSD	   	:= cards/cards.xsd
 
 # For html-table and python-merge targets
 MERGED 		:= $(HTML_DIR)/cards_merged.xml
@@ -85,15 +85,15 @@ $(HTML_DIR):
 help:
 	@echo "Usage: make [target]"
 	@echo "Targets:"
-	@echo "  help           - show this help"
-	@echo "  validate       - validate INPUT against $(XSD) using validate_xml from render script"
+	@echo "  help		   - show this help"
+	@echo "  validate	   - validate INPUT against $(XSD) using validate_xml from render script"
 	@echo "  python-merge   - merge XML files from base or optional DLC(s) into $(MERGED)"
-	@echo "  html-table     - generate an HTML table of all cards (requires xsltproc)"
-	@echo "  html-cards     - generate HTML files for printable cards (front/back/both)"
-	@echo "  html           - generate front/back/both HTML using current XSL (uses python merger when cards/ is present)"
-	@echo "  pdf            - generate PDFs from the HTML outputs (frontend conversion scripts required)"
+	@echo "  html-table	 - generate an HTML table of all cards (requires xsltproc)"
+	@echo "  html-cards	 - generate HTML files for printable cards (front/back/both)"
+	@echo "  html		   - generate front/back/both HTML using current XSL (uses python merger when cards/ is present)"
+	@echo "  pdf			- generate PDFs from the HTML outputs (frontend conversion scripts required)"
 	@echo "  MODE=[front|back|both] - set XSLT mode for html-cards/html (default both)"
-	@echo "  clean          - remove generated PDFs and HTML in $(OUT_DIR) and $(HTML_DIR)"
+	@echo "  clean		  - remove generated PDFs and HTML in $(OUT_DIR) and $(HTML_DIR)"
 
 validate:
 	@if [ -n "$(strip $(DLC_NAMES))" ]; then \
@@ -189,9 +189,12 @@ html-back: merge
 html-both: merge
 	@xsltproc --stringparam mode both --stringparam colorMode $(COLOR) -o $(HTML_BOTH) $(XSL_CARDS) $(MERGED)
 
+assets-opt: $(HTML_DIR)
+	@printf "$(YELLOW)Optimizing images from assets/ to $(HTML_DIR)/assets/$(RESET)\n"
+	$(PY) $(TOOLS_DIR)/optimize_images.py assets $(HTML_DIR)/assets
+
 # HTML build now produces per-directory pages for tables and stats
-html: html-table-all html-stats-all html-rules html-cards html-both $(HTML_DIR)
-	cp -r assets $(HTML_DIR)/
+html: assets-opt html-table-all html-stats-all html-rules html-cards html-both $(HTML_DIR)
 	@printf "$(YELLOW)Selected mode=$(BLUE)%s$(YELLOW) color=$(BLUE)%s$(RESET)\n" "${MODE}" "${COLOR}"
 	@printf "$(GREEN)HTML files generation complete.$(RESET)\n"
 
