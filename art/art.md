@@ -61,3 +61,18 @@ Prompt: A high-quality printable board game card back illustration, vertical asp
 
 **Manhattan je náš / Area control (`goal_control.jpg`)**
 > A classic 1920s mob boss standing on a high balcony overlooking the glowing skyline of Manhattan at night, smoking a cigar, confident posture, 1920s noir mafia aesthetic, dark moody lighting, high quality board game card illustration, highly detailed, no text.
+
+**Pašerácká síť (`goal_paseraci.png`)**
+> A dark 1920s dockside loading crates of liquor directly into an elegant vintage delivery truck, mist rolling off the water, mobsters overseeing the transfer, 1920s noir mafia aesthetic, dark moody lighting, high quality board game card illustration, highly detailed, no text.
+
+**Krytí shora (`goal_kryti.png`)**
+> A corrupt city official in a tailored suit shaking hands with a menacing mobster in front of a small 1920s bakery storefront, streetlamp illumination, 1920s noir mafia aesthetic, dark moody lighting, high quality board game card illustration, highly detailed, no text.
+
+**Expanze syndikátu (`goal_expanze.png`)**
+> A sprawling 1920s map of New York spread across a table with a revolver, a lit cigar, and wooden mafia tokens placed on different boroughs, 1920s noir mafia aesthetic, dark moody lighting, high quality board game card illustration, highly detailed, no text.
+
+**Dopravní monopol (`goal_doprava.png`)**
+> A busy 1920s railyard intersecting with harbor docks, steam trains passing by massive cargo ships, mobsters coordinating operations, 1920s noir mafia aesthetic, dark moody lighting, high quality board game card illustration, highly detailed, no text.
+
+**Kmotrova pravá ruka (`goal_kmotr.png`)**
+> A high-level mob boss looking out from an ornate city hall window toward the glowing skyscrapers of Manhattan, silhouetted against the city lights, 1920s noir mafia aesthetic, dark moody lighting, high quality board game card illustration, highly detailed, no text.

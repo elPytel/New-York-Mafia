@@ -2,8 +2,8 @@
 
 - [Pravidla hry](#pravidla-hry)
   - [Mapa](#mapa)
-    - [Oblast](#oblast)
-    - [Sekce](#sekce)
+    - [Čtvrť](#čtvrť)
+    - [Pole](#pole)
   - [Žetony a herní kameny](#žetony-a-herní-kameny)
   - [Kostky](#kostky)
   - [Balíčky](#balíčky)
@@ -23,16 +23,16 @@
 ![](../assets/maps/Greater-New-York.jpg)
 ![](../assets/maps/NewYork.png)
 
-Herní mapa je rozdělena na oblasti a každá ma sektory. Každá oblast je vyznačená jednou barvou.
+Herní mapa je rozdělena na **Čtvrť** a každá má **Pole**. 
 Voda lze překročit jen přes most, nebo vlakem.
 
-### Oblast
+### Čtvrť
 
-Lokace ohraničená stejnou barvou.
+Každá Čtvrť je vyznačená jednou barvou.
 
-V každé oblasti je jedna sekce nádraží.
+V každé čtvrťi je jedna sekce nádraží.
 
-Oblasti:
+Čtvrťi:
 - Manhattan
 - Queens
 - Brooklyn 
@@ -41,20 +41,20 @@ Oblasti:
 Rada města 
 - 5 postaviček 
 
-### Sekce
+### Pole
 
-Sekce - jedno pole na mapě.
+Jedno pole na mapě.
 
 Na jednom polí může stát libovolné množství figurek.
 
-Sekce:
+Pole jsou rozdělené do kategorií:
 - Železnice - pouze pohyb
 - Stavba na Manhattanu (lobbování)
 - Doky (pašování)
 - Malé podniky (výpalné)
 - Kluby (prohibice)
 
-Obsažené pole ke takové, na kterém stojí figurky pouze jedné barvy.
+Obsazené pole ke takové, na kterém stojí figurky pouze jedné barvy.
 
 Brooklyn 
 - 2 malé podniky 
@@ -138,7 +138,7 @@ Rusové - nás hodně - za každého ztraceného člověka hoď kostkou, pokud t
 Italové - zásoby - za každou postavičku v docích získaš na začátku tahz jeden žeton munice, pokud máš munice méně než 5. Dober si munice, aby jsi měl max 5.
 
 ### Japonci
-Japonci - Obětování - můžeš ve svém tahu odstranit svou postavičku z herního planu. Pak odeber nepratelskou postavičku ze stejné lokace. 
+Japonci - Obětování - můžeš ve svém tahu odstranit svou postavičku z herního planu. Pak odeber nepratelskou postavičku ze stejné lokace. Schopnost se aplikuje při vyhodnocení kostek.
 
 Japonec může v jednom kole stejnou postavičkou jak střílet, tak se obětovat.
 
@@ -172,6 +172,30 @@ Průběh kola:
 5. Splnění úkolu 
 
 Kostkami se háže až třikrát. Po každém hodu se hráč může rozhodnou, které kostky si "nechá" a kterými bude házet znovu. Efekt se vyhodnotí po posledním hodu.
+
+1. **Doplnění trhu a Událost**
+   - Pokud je na stole méně karet Herních cílů, než je (počet hráčů + 1), doplňte je z balíčku cílů.
+   - Hráč otočí vrchní kartu z balíčku Událostí a okamžitě se vyhodnotí její efekt (platí pro všechny hráče, pokud není uvedeno jinak).
+
+2. **Hod kostkami**
+   - Hráč na tahu hodí 5 kostkami.
+   - Může provést až 2 přehozy (systém Yahtzee). Po každém hodu si může libovolný počet kostek odložit a se zbytkem házet znovu. Výsledek po 3. hodu (nebo pokud hráč už přehazovat nechce) je finální.
+
+3. **Pohyb po mapě**
+   - Hráč může každou svou figurkou na mapě posunout o 1 pole. Lze se pohybovat pouze přes hrany sousedících polí (tzv. Manhattanská vzdálenost).
+   - **Jízda vlakem:** Figurka, která začíná svůj tah na poli Nádraží, se může místo běžného pohybu přemístit na libovolné jiné pole Nádraží na mapě.
+
+4. **Vyhodnocení kostek**
+Hráč může vyhodnotit padlé symboly na kostkách v libovolném pořadí:
+   - **Taxi:** Okamžitě přemísti svou 1 figurku na libovolné pole na plánu (kdekoliv).
+   - **Nová postavička:** Vezmi svou 1 figurku ze zásoby a umísti ji na libovolné Nádraží. (Maximum figurek na plánu je 8).
+   - **Odstřelovač:** Okamžitě odstraň z mapy 1 libovolnou nepřátelskou figurku (nepotřebuješ střelce ani náboj).
+   - **Munice:** Vezmi si z banku 1 žeton Munice do své osobní zásoby. (Max. počet žetonů je určen tvou kartou Gangu).
+   - **Revolver:** Vyžaduje 1 Náboj (buď z kostky, nebo utracením žetonu). Odstraň 1 nepřátelskou figurku z pole, na kterém máš alespoň 1 svou figurku.
+   - **Thompson:** Vyžaduje 1 Náboj za každý výstřel (kostka nebo žeton). Funguje jako Revolver, ale jednu kostku Thompsona lze kombinovat s více Náboji a zabít tak v jedné lokaci více nepřátel v rámci jednoho vyhodnocení.
+
+1. **Plnění Herních cílů**
+  Hráč si zkontroluje všechny vyložené karty Herních cílů. Pokud na konci tohoto svého tahu splňuje podmínky, kartu si vezme k sobě a okamžitě si započte Vítězné body na ní uvedené. Cíle může splnit i více najednou.
 
 ### Pohyb po mapě
 
