@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cards game="New York Mafia" version="0.1">
+
+  <!-- ========================================== -->
+  <!-- BALÍČEK UDÁLOSTÍ (20 karet)                -->
+  <!-- ========================================== -->
+
+  <card id="evt_vlak" count="3" deck="event">
+    <name>Přijel vlak</name>
+    <text>Schopnost Mexičanů se aktivuje. Hráči získají 1 žeton munice za každou svou figurku, kterou mají momentálně na nádraží.</text>
+    <event type="vlak" image="assets/event_vlak.png" />
+  </card>
+
+  <card id="evt_munice" count="5" deck="event">
+    <name>Zásilka zbraní</name>
+    <text>Ekonomický stimul. Každý hráč si vezme 1 žeton munice do své zásoby.</text>
+    <event type="munice" image="assets/event_munice.png" />
+  </card>
+
+  <card id="evt_lod" count="3" deck="event">
+    <name>Nákladní loď</name>
+    <text>Do doků v Jersey připlula loď. Hráč ovládající největší množství doků získává 1 žeton munice.</text>
+    <event type="lod" image="assets/event_lod.png" />
+  </card>
+
+  <card id="evt_alkohol" count="2" deck="event">
+    <name>Dodávka alkoholu</name>
+    <text>Bodovací událost. Hráč, který má v tento moment nejvíce figurek v Klubech, získává 1 Vítězný bod (VB).</text>
+    <event type="alkohol" image="assets/event_alkohol.png" />
+  </card>
+
+  <card id="evt_uplatky" count="2" deck="event">
+    <name>Zkorumpovaná radnice</name>
+    <text>Bodovací událost. Hráč s největším počtem postaviček v Městské radě získává 1 Vítězný bod (VB).</text>
+    <event type="uplatky" image="assets/event_uplatky.png" />
+  </card>
+
+</cards>
