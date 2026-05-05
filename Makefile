@@ -72,6 +72,7 @@ PDF_BOTH  := $(OUT_DIR)/cards_both.pdf
 
 
 ASSETS_STAMP := $(HTML_DIR)/assets/.optimized
+DEPS_LISTS := $(wildcard pip-dependencies.txt apt-dependencies.txt)
 
 .PHONY: all validate merge html-rules html-table html-cards html pdf clean deps help
 
@@ -82,9 +83,6 @@ $(OUT_DIR):
 
 $(HTML_DIR):
 	mkdir -p $(HTML_DIR)
-
-deps:
-	@./install.sh
 
 help:
 	@echo "Usage: make [target]"
@@ -99,6 +97,12 @@ help:
 	@echo "  pdf			- generate PDFs from the HTML outputs (frontend conversion scripts required)"
 	@echo "  MODE=[front|back|both] - set XSLT mode for html-cards/html (default both)"
 	@echo "  clean		 	- remove generated PDFs and HTML in $(OUT_DIR) and $(HTML_DIR)"
+
+deps: $(OUT_DIR)/.packages_installed | $(OUT_DIR)
+$(OUT_DIR)/.packages_installed: $(DEPS_LISTS)
+	@printf "$(YELLOW)Installing dependencies from $(BLUE)$^$(RESET)...\n"
+	@./install.sh
+	@touch $@
 
 validate: $(OUT_DIR)/.validated
 $(OUT_DIR)/.validated: $(shell find $(CARDS_DIR) -type f -name '*.xml') $(XSD) | $(OUT_DIR)
